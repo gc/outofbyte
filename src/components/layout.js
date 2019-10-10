@@ -1,67 +1,48 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
+
+import { breakpoints } from '../meta/theme';
+
+const Wrapper = styled.div`
+  margin: 0 auto;
+  padding: 25px 20px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  ${breakpoints.down('sm')} {
+    padding: 25px 15px;
+  }
+`;
+
+const Main = styled.main`
+  padding: 1rem 0px;
+`;
 
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
-    let header;
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      );
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      );
-    }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Wrapper>
+        <header>
+          {location.pathname === rootPath ? (
+            <h1>
+              <Link to="/">{title}</Link>
+            </h1>
+          ) : (
+            <h3 style={{ marginTop: 0 }}>
+              <Link to="/">{title}</Link>
+            </h3>
+          )}
+        </header>
+        <Main>{children}</Main>
+        <footer>© {new Date().getFullYear()}, Out of Byte</footer>
+      </Wrapper>
     );
   }
 }

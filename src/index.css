@@ -1,0 +1,318 @@
+html {
+  font-family: 'Lora', serif;
+}
+
+body {
+  margin: 0px;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p a {
+  color: blue;
+  text-decoration: underline;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+h1,
+h2 {
+  border-bottom: 2px solid black;
+  padding-bottom: 0.7rem;
+}
+h3,
+h4,
+h5 {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  transition: font-size 0.2s ease-in-out;
+  margin: 2.75rem 0 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  font-family: 'Prata', serif;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.109em;
+}
+
+h2 {
+  font-size: 3.157em;
+}
+
+h3 {
+  font-size: 2.369em;
+}
+
+h4 {
+  font-size: 1.777em;
+}
+
+h5 {
+  font-size: 1.333em;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+@media (max-width: 759.95px) {
+  h1 {
+    margin-top: 0;
+    font-size: 2.488em;
+  }
+
+  h2 {
+    font-size: 2.074em;
+  }
+
+  h3 {
+    font-size: 1.728em;
+  }
+
+  h4 {
+    font-size: 1.44em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  small {
+    font-size: 0.833em;
+  }
+}
+
+blockquote {
+  padding: 1rem 0;
+  font-style: italic;
+  position: relative;
+}
+
+blockquote:before {
+  content: '“';
+  font-size: 4rem;
+  position: absolute;
+  top: 0px;
+  left: -36px;
+}
+
+blockquote:after {
+  content: '”';
+  position: absolute;
+  font-size: 4rem;
+  right: -10px;
+  bottom: -27px;
+}
+
+.gatsby-highlight pre {
+  display: block;
+  position: relative;
+  padding: 20px 0 0;
+  background: #193549;
+  color: #dcdcdc;
+  border-radius: 5px;
+  overflow-y: hidden;
+}
+.gatsby-highlight pre:before {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #ff5f56;
+  border-radius: 50%;
+  content: '';
+}
+.gatsby-highlight pre:after {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffbd2e;
+  border-radius: 50%;
+  content: '';
+}
+.gatsby-highlight pre code:before {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  left: 60px;
+  width: 10px;
+  height: 10px;
+  background-color: #27c93f;
+  border-radius: 50%;
+  content: '';
+}
+.gatsby-highlight pre code {
+  background: none;
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  overflow: inherit;
+  padding: 1.58333rem;
+  word-wrap: normal;
+  font-family: Inconsolata, monospace;
+}
+.gatsby-highlight code {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+  background: transparent;
+  color: #3b9cff;
+  display: inline;
+  font-family: D2Coding, 'D2 coding', monospace, serif;
+  max-width: 100%;
+  overflow: auto;
+  padding: 0 0.1625rem;
+}
+.gatsby-highlight {
+  position: relative;
+}
+.gatsby-highlight pre code {
+  color: #dcdcdc;
+}
+.gatsby-highlight .copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  line-height: 12px;
+  color: #263238;
+  background-color: #dcdcdc;
+  background-image: linear-gradient(#ededed, #dcdcdc);
+  outline: 0;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 3;
+}
+.gatsby-highlight .copy-button:hover {
+  background-color: #dcdcdc;
+  background-image: linear-gradient(#dcdcdc, #cbcbcb);
+  border-color: #cbcbcb;
+}
+.gatsby-highlight .copy-button:active {
+  background-color: #cbcbcb;
+  background-image: linear-gradient(#cbcbcb, #bababa);
+  border-color: #bababa;
+}
+.gatsby-highlight .keyword,
+.gatsby-highlight .tag,
+.gatsby-highlight .css .class,
+.gatsby-highlight .css .id,
+.gatsby-highlight .nginx .title,
+.gatsby-highlight .request,
+.gatsby-highlight .status {
+  color: #e3ceab;
+}
+
+.gatsby-highlight .number,
+.gatsby-highlight .date {
+  color: #8cd0d3;
+}
+.gatsby-highlight .dos .envvar,
+.gatsby-highlight .dos .stream,
+.gatsby-highlight .variable,
+.gatsby-highlight .apache .sqbracket {
+  color: #efdcbc;
+}
+.gatsby-highlight .diff .change,
+.gatsby-highlight .literal {
+  color: #efefaf;
+}
+.gatsby-highlight .diff .chunk,
+.gatsby-highlight .subst {
+  color: #8f8f8f;
+}
+.gatsby-highlight .title,
+.gatsby-highlight .diff .header,
+.gatsby-highlight .apache .tag,
+.gatsby-highlight .nginx .built_in,
+.gatsby-highlight .prompt {
+  color: #efef8f;
+}
+
+.gatsby-highlight .diff .deletion,
+.gatsby-highlight .string,
+.gatsby-highlight .css .rules .value {
+  color: #cc9393;
+}
+.gatsby-highlight .diff .addition,
+.gatsby-highlight .comment {
+  color: #7f9f7f;
+}
+
+.gatsby-resp-image-wrapper {
+  max-width: 100%;
+}
+
+.blog-image-horizontal {
+  margin: 0px !important;
+  width: 100%;
+}
+
+.blog-image-right img,
+.blog-image-left img {
+  border-radius: 5px;
+}
+
+.blog-image-right {
+  width: 240px;
+  float: right;
+  margin: 0 1rem;
+}
+
+.blog-image-left {
+  width: 240px;
+  float: left;
+  margin: 0 1rem;
+}
+
+figcaption {
+  margin: 8px 0px;
+  font-style: italic;
+}
+
+.blog-image-right figcaption {
+  float: right;
+}
+
+.blog-image-left figcaption {
+  float: left;
+}

@@ -1,15 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Out of Byte`,
+    author: `gc`,
+    description: `Out of Byte is a little blog with NodeJS, TypeScript, JavaScript related content.`,
+    siteUrl: `https://outofbyte.netlify.com/`,
     social: {
       twitter: `kylemathews`,
     },
   },
   plugins: [
     'gatsby-plugin-preact',
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,7 +32,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 790,
             },
           },
           {
@@ -53,7 +54,6 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
