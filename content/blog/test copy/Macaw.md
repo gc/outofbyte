@@ -23,6 +23,12 @@ hi hi hi hi
 function reallyLongLines(param, param2, param3, param4, param5) {
   return param;
 }
+
+if (true) {
+  if (false) {
+    console.log(1);
+  }
+}
 ```
 
 > The copy warned the Little Blind Text, that where it came from it would have

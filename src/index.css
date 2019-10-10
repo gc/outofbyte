@@ -183,8 +183,10 @@ blockquote:after {
   display: inline-block;
   overflow: inherit;
   padding: 1.58333rem;
+  white-space: inherit;
   word-wrap: normal;
   font-family: Inconsolata, monospace;
+  max-width: 75vw;
 }
 .gatsby-highlight code {
   white-space: pre;
@@ -287,8 +289,7 @@ blockquote:after {
   width: 100%;
 }
 
-.blog-image-right img,
-.blog-image-left img {
+figure img {
   border-radius: 5px;
 }
 
