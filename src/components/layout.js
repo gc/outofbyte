@@ -31,11 +31,11 @@ class Layout extends React.Component {
       <Wrapper>
         <header>
           {location.pathname === rootPath ? (
-            <h1>
+            <h1 style={{ border: 'none' }}>
               <Link to="/">{title}</Link>
             </h1>
           ) : (
-            <h3 style={{ marginTop: 0 }}>
+            <h3 style={{ marginTop: 0, border: 'none' }}>
               <Link to="/">{title}</Link>
             </h3>
           )}

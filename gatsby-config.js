@@ -5,41 +5,58 @@ module.exports = {
     description: `Out of Byte is a little blog with NodeJS, TypeScript, JavaScript related content.`,
     siteUrl: `https://outofbyte.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
-    },
+      twitter: `kylemathews`
+    }
   },
   plugins: [
+    'gatsby-plugin-webpack-size',
     'gatsby-plugin-preact',
     `gatsby-plugin-styled-components`,
+    'gatsby-plugin-netlify-cache',
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lora`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Prata`
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
+        name: `blog`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
+        name: `assets`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 790,
-            },
+              maxWidth: 790
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -84,19 +101,20 @@ module.exports = {
                   language: 'superscript',
                   extend: 'javascript',
                   definition: {
-                    superscript_types: /(SuperType)/,
+                    superscript_types: /(SuperType)/
                   },
                   insertBefore: {
                     function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
-              ],
-            },
-          }`gatsby-remark-copy-linked-files`,
-        ],
-      },
+                      superscript_keywords: /(superif|superelse)/
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          `gatsby-remark-copy-linked-files`
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -104,7 +122,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -115,10 +133,10 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
-      },
+        icon: `content/assets/gatsby-icon.png`
+      }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-  ],
+    `gatsby-plugin-react-helmet`
+  ]
 };
