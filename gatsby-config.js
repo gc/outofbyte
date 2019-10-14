@@ -19,7 +19,7 @@ module.exports = {
         fonts: [
           {
             family: `Lora`,
-            variants: [`400`, `700`]
+            variants: [`400`]
           },
           {
             family: `Prata`
