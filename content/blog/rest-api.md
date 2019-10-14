@@ -1,5 +1,5 @@
 ---
-title: Simple and fast NodeJS API
+title: Simple NodeJS REST API
 date: '2015-05-01T22:12:03.284Z'
 description: 'This post will go into depth on building a simple, scalable, lightweight and fast REST API in NodeJS.'
 ---
